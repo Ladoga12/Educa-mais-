@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Contato - EducaMais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Página de Contato -->
+    <div data-role="page" id="contato">
+        <div data-role="header">
+            <h1>Contato</h1>
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="figuras.html">Figuras Geométricas</a></li>
+                    <li><a href="contato.html" class="ui-btn-active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div data-role="main" class="ui-content">
+            <h2>Solicitar Ajuda</h2>
+            <form id="contato-form">
+                <label for="contato-nome">Nome:</label>
+                <input type="text" id="contato-nome" required>
+                <label for="contato-email">E-mail:</label>
+                <input type="email" id="contato-email" required>
+                <label for="contato-telefone">Telefone:</label>
+                <input type="tel" id="contato-telefone" required>
+                <button type="submit">Solicitar Ajuda</button>
+            </form>
+        </div>
+        <div data-role="footer">
+            <h4>EducaMais © 2024</h4>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
