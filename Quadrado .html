@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Área do Quadrado</title>
+    <!-- jQuery Mobile -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#calcular-quadrado").click(function() {
+                var lado = parseFloat($("#lado").val());
+                var area = lado * lado;
+                $("#resultado-quadrado").text("Área do Quadrado: " + area.toFixed(2) + " unidades²");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div data-role="page" id="quadrado">
+        <div data-role="header">
+            <h1>Área do Quadrado</h1>
+        </div>
+        <div data-role="content">
+            <label for="lado">Lado:</label>
+            <input type="number" id="lado" placeholder="Digite o lado">
+            <button id="calcular-quadrado">Calcular Área</button>
+            <p id="resultado-quadrado"></p>
+        </div>
+        <div data-role="footer">
+            <h4><a href="#home">Voltar</a></h4>
+        </div>
+    </div>
+</body>
+</html>
