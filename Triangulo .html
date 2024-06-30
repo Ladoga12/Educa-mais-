@@ -1,44 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Figuras Geométricas</title>
+    <title>Área do Triângulo</title>
     <!-- jQuery Mobile -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#calcular-triangulo").click(function() {
+                var base = parseFloat($("#base").val());
+                var altura = parseFloat($("#altura").val());
+                var area = (base * altura) / 2;
+                $("#resultado-triangulo").text("Área do Triângulo: " + area.toFixed(2) + " unidades²");
+            });
+        });
+    </script>
 </head>
 <body>
-    <div data-role="page" id="figuras">
+    <div data-role="page" id="triangulo">
         <div data-role="header">
-            <h1>Figuras Geométricas</h1>
+            <h1>Área do Triângulo</h1>
         </div>
         <div data-role="content">
-            <table data-role="table" class="ui-responsive">
-                <thead>
-                    <tr>
-                        <th>Figura</th>
-                        <th>Imagem</th>
-                        <th>Fórmula</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Triângulo</td>
-                        <td><img src="https://via.placeholder.com/100.png?text=Tri%C3%A2ngulo" alt="Triângulo"></td>
-                        <td>A = 1/2 * base * altura</td>
-                    </tr>
-                    <tr>
-                        <td>Quadrado</td>
-                        <td><img src="https://via.placeholder.com/100.png?text=Quadrado" alt="Quadrado"></td>
-                        <td>A = lado²</td>
-                    </tr>
-                    <tr>
-                        <td>Círculo</td>
-                        <td><img src="https://via.placeholder.com/100.png?text=C%C3%ADrculo" alt="Círculo"></td>
-                        <td>A = π * raio²</td>
-                    </tr>
-                </tbody>
-            </table>
+            <label for="base">Base:</label>
+            <input type="number" id="base" placeholder="Digite a base">
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" placeholder="Digite a altura">
+            <button id="calcular-triangulo">Calcular Área</button>
+            <p id="resultado-triangulo"></p>
         </div>
         <div data-role="footer">
             <h4><a href="#home">Voltar</a></h4>
@@ -46,3 +36,4 @@
     </div>
 </body>
 </html>
+
