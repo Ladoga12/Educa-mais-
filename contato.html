@@ -1,5 +1,6 @@
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
     <title>Contato</title>
     <!-- jQuery Mobile -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -11,7 +12,7 @@
                 var telefone = $("#telefone").val();
                 var email = $("#email").val();
                 var mensagem = "Telefone: " + telefone + "%0AEmail: " + email;
-                var url = "href="https://wa.me/22999006376" + encodeURIComponent(mensagem);
+                var url = "https://wa.me/22999006376?text=" + encodeURIComponent(mensagem);
                 window.open(url, "_blank");
             });
         });
